@@ -1,11 +1,12 @@
 <% if user_signed_in? %>
-	<ul>
+	<ul class="nav navbar-nav navbar-right">
 		<li><%= link_to "Submit link", new_link_path %></li>
 		<li><%= link_to "Cuenta", edit_user_registration_path %></li>
 		<li><%= link_to "Cerrar sesión", destroy_user_session_path, method:  :delete %></li>
-		
 	</ul>
 <% else %>
-	<%= link_to "Registrate", new_user_registration_path %>
-	<%= link_to "Iniciar sesión", new_user_session_path%>
+	<ul class="nav navbar-nav pull-right">
+		<li><%= link_to "Registrate", new_user_registration_path %></li>
+		<li><%= link_to "Iniciar sesión", new_user_session_path%></li>
+	</ul>
 <% end %>

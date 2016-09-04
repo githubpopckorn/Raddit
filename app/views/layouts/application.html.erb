@@ -9,10 +9,24 @@
   </head>
 
   <body>
-    <%= render "partials/navigation" %>
-    <% flash.each do |name,msg| %>
-    	<% content_tag(:div, msg, class: "alert alert-#{name}") %>
-    <% end %>
-    <%= yield %>
+   <header class="navbar navbar-default" role="navigation">
+   	<div class="navbar-inner">
+   		<div class="container">
+   			<div id="logo" class="navbar-brand"><%= link_to "Raddit", root_path %></div>
+   			<nav class="collpase navbar-collapse navbar-ex1-collapse">
+   				<%= render "partials/navigation" %>
+   			</nav>
+   		</div>
+   	</div>
+   </header>
+    
+    <div id="main_content" class="container">
+    	<% flash.each do |name,msg| %>
+				<% content_tag(:div, msg, class: "alert alert-#{name}") %>
+			<% end %>
+			<div id="content" class="col-md-9 center-block">
+				<%= yield %>
+			</div>
+    </div>
   </body>
 </html>
