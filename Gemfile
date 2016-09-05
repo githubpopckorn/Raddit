@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'record_tag_helper', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
